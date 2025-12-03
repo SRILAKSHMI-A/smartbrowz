@@ -16,56 +16,86 @@
         text-align: center;
         padding: 20px;
       }
+
+      .certificate-form {
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 8px 12px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+
       .container {
         max-width: 800px;
         margin: auto;
         padding: 30px;
         background: #fff;
-        border: 5px solid #333;
+        border: 5px dashed #333;
         position: relative;
+        text-align: center;
+        border-radius: 15px;
       }
+
       header img {
-        height: 50px;
+        height: 60px;
       }
+
       header h1 {
         display: inline-block;
         margin-left: 10px;
         vertical-align: middle;
       }
+
+      h2.cert-title {
+        font-family: 'Parisienne', cursive;
+        font-size: 40px;
+        margin: 15px 0;
+      }
+
       .cert-name h2 {
         font-family: 'Parisienne', cursive;
         font-size: 36px;
         margin: 10px 0;
       }
-      .certificate-form {
-        margin-bottom: 20px;
-      }
-      input[type="text"] {
-        padding: 8px 12px;
-        font-size: 16px;
-      }
-      button {
-        padding: 8px 16px;
-        font-size: 16px;
-        cursor: pointer;
-      }
+
       .cert-desc {
         margin-top: 20px;
+        font-size: 16px;
       }
+
       footer {
+        margin-top: 25px;
         display: flex;
         justify-content: space-around;
-        margin-top: 30px;
       }
+
       footer p {
         margin-top: 5px;
+        font-size: 14px;
+      }
+
+      .cat-meme {
+        width: 150px;
+        margin-top: 20px;
+      }
+
+      .from-team {
+        font-weight: bold;
+        margin-top: 15px;
       }
     </style>
   </head>
-
   <body>
     <h1>Survived Chennai Monsoon? Reward Yourself!</h1>
-    <p>Enter your name and generate a certificate for showing up to work despite the rains.</p>
+    <p>Enter your name and get a certificate for coming to office amidst cyclone, meetings, merge conflicts, and soggy socks 😸</p>
 
     <div class="certificate-form">
       <input type="text" id="user-name" placeholder="Enter your name" />
@@ -73,38 +103,32 @@
     </div>
 
     <div class="container" id="certificate">
-      <header>
-        <img src="https://zoho.com/sites/zweb/images/catalyst/zylker-logo.png" alt="brand logo" />
-        <h1>Zylker</h1>
+      
       </header>
 
-      <h2>Certificate of Bravery</h2>
+      <h2 class="cert-title">Certificate of Monsoon Bravery</h2>
 
       <div class="cert-name">
         <p>PROUDLY PRESENTED TO</p>
         <h2 id="cert-name">Your Name</h2>
       </div>
 
+      <img src="https://pin.it/6VIX2NNh5" alt="Cat Meme" class="cat-meme" />
+
+
       <div class="cert-desc">
         <p>
-          for bravely coming to work during the Chennai monsoon, navigating puddles, traffic floods, and soggy socks, while still keeping productivity alive. 
-          This certificate is a token of appreciation from the universe (and your team) for surviving today's chaos.
+          For making it to the office amidst cyclone-level Chennai monsoon, pulling your merge conflicts, surviving endless meetings, and still keeping productivity alive. This certificate is a token of appreciation for your heroic developer spirit.
         </p>
+        <p class="from-team">From <b>Team Catalyst</b> 😎</p>
       </div>
 
       <footer>
-        <div>
-          <p>Product Manager</p>
-        </div>
-        <div>
-          <p>Manager - HR & Global Operations</p>
-        </div>
+        
       </footer>
     </div>
 
-    <!-- html2pdf library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-
     <script>
       const input = document.getElementById('user-name');
       const button = document.getElementById('generate-btn');
